@@ -1,8 +1,9 @@
+const menuBtn = document.querySelector('.menu-btn')
 const nav = document.querySelector('.nav')
 
-const pointingToNavigation = (event) => {
+const pointingToMenu = (event) => {
     nav.classList.toggle('active');
+    menuBtn.classList.toggle('active');
 }
 
-nav.addEventListener('mouseenter', pointingToNavigation);
-nav.addEventListener('mouseleave', pointingToNavigation);
+menuBtn.addEventListener('click', pointingToMenu);
