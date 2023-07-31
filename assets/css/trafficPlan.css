@@ -54,27 +54,51 @@
 }
 .nav__link  {
     display: flex;
+    align-items: center;
 }
-
+.mail-w {
+    width: 22px;
+}
+.nav__link-text {
+    overflow: hidden;
+    margin-left: 15px;
+    color: var(--white-link-color);
+}
+.nav__link-title {
+    max-width: 140px;
+    width: 100%;
+    color: var(--white-link-color);
+    text-align: center;
+    font-family: 'Merriweather';
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 150%;
+}
 .nav__footer {
     max-height: 160px;
     height: 100%;
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    gap: 20px;
     overflow: hidden;
 }
 .nav__footer-item {
     display: flex;
-}
+    justify-content: start;
+    width: 100%;
+} 
+.nav__footer-item img {
+    margin-left: 10px;
+} 
 .nav__social-list {
     height: max-content;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     align-content: space-between;
-    justify-content: space-between;
+    justify-content: space-evenly;
     gap: 15px;
     padding: 8px;
     border-radius: 5px;
