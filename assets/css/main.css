@@ -38,6 +38,7 @@ p{
 	background: white;
 	width: 100%;
 	position: fixed;
+	z-index: 100;
 }
 .nav__content{
 	display: flex;
@@ -185,27 +186,27 @@ p{
 	transition: 0.5s;
 }
 .forwhat__card1:hover{
-	background: url(../images/img/forwhat-security.png);
+	background: url(../images/icons/img/forwhat-security.png);
 	color: white;
 }
 .forwhat__card2:hover{
-	background: url(../images/img/forwhat-ip.png);
+	background: url(../images/icons/img/forwhat-ip.png);
 	color: white;
 }
 .forwhat__card3:hover{
-	background: url(../images/img/forwhat-speed.png);
+	background: url(../images/icons/img/forwhat-speed.png);
 	color: white;
 }
 .forwhat__card4:hover{
-	background: url(../images/img/forwhat-anon.png);
+	background: url(../images/icons/img/forwhat-anon.png);
 	color: white;
 }
 .forwhat__card5:hover{
-	background: url(../images/img/forwhat-mask.png);
+	background: url(../images/icons/img/forwhat-mask.png);
 	color: white;
 }
 .forwhat__card6:hover{
-	background: url(../images/img/forwhat-support.png);
+	background: url(../images/icons/img/forwhat-support.png);
 	color: white;
 }
 .footer{
