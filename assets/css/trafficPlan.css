@@ -232,26 +232,112 @@
     width: 100%;
 }
 .general__item {
+    position: relative;
     display: flex;
     width: max-content;
     align-items: center;
     color: var(--white-link-color);
+    cursor: pointer;
 }
 .general__item img{
     width: 23px;
     margin-right: 10px;
 }
-
+.account-block {
+    position: absolute;
+    visibility: hidden;
+    max-width: 230px;
+    width: 100%;
+    height: 0;
+    right: 0;
+    background-color: var(--secondary-btn-color);
+    border-radius: 5px;
+    transition: .2s ease-out;
+}
+.account-block.active {
+    height: 135px;
+    visibility: visible;
+    transition: .2s ease-out;
+}
+.account-block .account-block__link{
+    visibility: hidden;
+    opacity: 0;  
+    transition: .2s ease-out;
+}
+.account-block.active .account-block__link{
+    visibility: visible;
+    opacity: 1;  
+    transition: .2s ease-out;
+}
+.account-block--pos {
+    top: 60px;
+    right: 30px;
+}
+.account-block__link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 15px;
+    color: var(--white-link-color);
+}
 .main {
     width: 100%;
     height: 100%;
 }
 .tariff {
     width: 100%;
+    padding: 25px 15px;
 }
 .tariff__title {
     text-transform: uppercase;
     color: var(--main-font-color);
     line-height: 150%;
-    margin: 25px 15px;
+}
+.tariff__title--margin {
+    margin-bottom: 20px;
+}
+.email-confirm {
+    max-width: 400px;
+    width: 100%;
+    height: max-content;
+    padding: 15px 12px;
+    border-radius: 4px;
+    background-color: var(--main-accent-color);
+}
+.email-confirm__title {
+    display: flex;
+    gap: 10px;
+}
+.email-confirm__title-text {
+    max-width: 120px;
+    width: 100%;
+    text-align: center;
+    color: var(--white-link-color);
+    font-family: Merriweather;
+    font-weight: 700;
+    line-height: 150%; 
+}
+.line {
+    width: 100%;
+    height: 1.5px;
+    background-color: var(--secondary-btn-color);
+}
+.line--margin {
+    margin: 10px 0;
+}
+.line-white {
+    background-color: var(--white-link-color);
+}
+.email-confirm__subtitle {
+    display: flex;
+    gap: 42px;
+}
+.email-confirm__subtitle-text {
+    max-width: 154px;
+    width: 100%;
+    color: var(--white-link-color);
+    font-weight: 500;
+}
+.email-confirm__subtitle-text--margin {
+    margin-bottom: 13px;
 }

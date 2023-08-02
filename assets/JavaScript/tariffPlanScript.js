@@ -4,6 +4,8 @@ const navLink = document.querySelectorAll('.nav__link')
 const navLinkText = document.querySelectorAll('.nav__link-text')
 const navItem = document.querySelectorAll('.nav__item')
 const additionalText = document.querySelectorAll('.additional-text')
+const account = document.querySelector('.account')
+const accountBlock = document.querySelector('.account-block')
 
 
 const pointingToMenu = (event) => {
@@ -35,4 +37,8 @@ navItem.forEach((item, index) => {
         }
     });
 })
+
+account.addEventListener('click', () => {
+    accountBlock.classList.toggle('active');
+});
 

@@ -39,6 +39,7 @@ a {
 
 /* button styles */
 .button {
+  cursor: pointer;
 }
 .button--transparent {
   border: 1px solid var(--white-link-color);
@@ -50,4 +51,14 @@ a {
   font-size: 16px;
   font-weight: 500;
   line-height: 150%;
+}
+.button--black {
+  padding: 4px 7px;
+  border-radius: 8px;
+  background-color: var(--secondary-btn-color);
+  color: var(--white-link-color);
+
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 150%
 }
