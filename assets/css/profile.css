@@ -1,0 +1,230 @@
+
+.profile{
+	width: 100%;
+	height: 100vh;
+	padding: 25px;
+	background: var(--main-bg-color);
+}
+.profile__contaner{
+	position: relative;
+}
+.profile__title{
+	margin-bottom: 30px;
+	color: var(--main-font-color);
+}
+.profile__up{
+	display: flex;
+	margin-bottom: 30px;
+}
+.profile__email{
+	width: 476px;
+	margin-right: 25px;
+	background: var(--main-accent-color);
+	border-radius: 5px;
+	padding: 15px 12px;
+}
+.profile__email img{
+	margin-bottom: 17px;
+}
+.profile__email-hr{
+	border:1px solid var(--secondary-btn-color);
+	margin-bottom: 17px;
+}
+.profile__email p{
+	margin-bottom: 33px;
+}
+.profile__email-contaner img{
+	margin-left: 62px;
+}
+.profile__email-contaner{
+	display: flex;
+	color: white;
+}
+.profile__email-btn{
+	text-decoration: none;
+	color: white;
+	background: var(--secondary-btn-color);
+	padding: 10px;
+	border-radius: 5px;
+
+}
+.profile__trafic{
+
+	background: var(--secondary-bg-color);
+	border-radius: 5px;
+	padding: 15px 12px;
+	color: white;
+}
+.profile__trafic-contaner{
+	display: flex;
+	align-items: center;
+	height: 100%;
+}
+.profile__trafic-btn{
+	text-decoration: none;
+	color: black;
+	background: white;
+	padding: 16px;
+	border-radius: 5px;
+	font-weight: 600;
+}
+.profile__trafic-text{
+	margin-bottom: 40px;
+	font-weight: 500;
+}
+.profile__trafic-kb{
+	background: var(--main-accent-color);
+	padding: 31px 19px;
+	border-radius: 5px;
+	color: white;
+	
+	margin-left: 62px;
+
+}
+.profile__down{
+	background: var(--secondary-bg-color);
+	border-radius: 10px;
+	padding: 30px 20px;
+	color: white;
+	display: flex;
+	justify-content: space-between;
+	position: relative;
+}
+.profile__down-item{
+	width: 450px;
+}
+.news-toggle, .prolong-toggle{
+	position: absolute;
+}
+.private__down-title{
+	margin-bottom: 20px;
+	font-weight: 500;
+}
+.profile__down hr{
+	margin-bottom: 30px;
+	height: 0.5px
+}
+.profile__private-info p{
+	margin-bottom: 30px;
+}
+.profile__private-info{
+	display: flex;
+	flex-direction: column;
+}
+.profile__down-email{
+	padding: 18px;
+	background: #426694;
+	border-radius: 5px;
+	outline: none;
+	font-size: 1rem;
+	border: none;
+}
+.profile__down-btn{
+	background: var(--main-accent-color);
+	width: 100%;
+	border-radius: 5px;
+	margin-top: 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 58px;
+}
+.profile__down-btn a{
+	text-decoration: none;
+	color: white;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+.profile__password p{
+	margin-bottom: 30px;
+}
+.profile__password-newpassword, .profile__down-password, .profile__password-confirmpassword{
+	border: 1px solid white;
+	background: none;
+	outline: none;
+	padding: 18px;
+	border-radius: 5px;
+}
+.profile__down-password{
+	width: 100%;
+	margin-bottom: 30px;
+}
+.profile__password-new{
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+}
+.profile__password-newpassword:focus, .profile__down-email:focus, .profile__down-password:focus, .profile__password-confirmpassword:focus{
+	color: white;
+}
+
+.news__toggle-contaner{
+	width: 46px;
+	height: 22px;
+	border-radius: 82px;
+	background: #426694;
+	position: relative;
+	margin-right: 20px;
+}
+.news__toggle-circle{
+	width: 16px;
+	height: 16px;
+	border-radius: 50%;
+	background: white;
+	position: absolute;
+	top: 3px;
+	left: 2px;
+	transition: 0.2s;
+}
+.news-toggle{
+	right: 433px;
+	width: 30px;
+	height: 30px;
+	top: 110px;
+	z-index: 100;
+	opacity: 0;
+}
+.prolong-toggle{
+	right: 433px;
+	width: 30px;
+	height: 30px;
+	top: 155px;
+	z-index: 100;
+	opacity: 0;
+}
+.news-toggle:checked ~ .profile__notifications .profile__notifications__labels .news__toggle-contaner1{
+	background: #51FF35;
+
+} 
+.news-toggle:checked ~ .profile__notifications .profile__notifications__labels .news__toggle-contaner1 .news__toggle-circle1{
+	transform: translateX(150%);
+	background: #426694;
+}
+.prolong-toggle:checked ~ .profile__notifications .profile__notifications__labels .prolong__toggle-contaner2{
+	background: #51FF35;
+
+} 
+.prolong-toggle:checked ~ .profile__notifications .profile__notifications__labels .prolong__toggle-contaner2 .prolong__toggle-circle2{
+	transform: translateX(150%);
+	background: #426694;
+}
+.profile__notifications__labels{
+	display: flex;
+	margin-bottom: 30px;
+}
+
+.profile__email-notif{
+	display: flex;
+	position: absolute;
+	width: 478px;
+	padding: 24px;
+	background: var(--secondary-bg-color);
+	border-radius: 5px;
+	top: 0;
+	right: 0;
+	color: white;
+}
+.profile__email-notif img{
+	margin-right: 20px;
+}
