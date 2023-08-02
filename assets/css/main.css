@@ -38,6 +38,7 @@ p{
 	background: white;
 	width: 100%;
 	position: fixed;
+  z-index: 10;
 }
 .nav__content{
 	display: flex;
@@ -174,6 +175,7 @@ p{
 	display: flex;
 }
 .forwhat__card{
+  position: relative;
 	background: white;
 	width: 470px;
 	padding: 48px 40px;
@@ -182,31 +184,56 @@ p{
 	border:1px solid var(--main-accent-color);
 	box-shadow: inset 0 0 12px var(--main-accent-color);
 	margin:25px 25px;
-	transition: 0.5s;
+	transition: 0.4s all;
 }
-.forwhat__card1:hover{
-	background: url(../images/img/forwhat-security.png);
-	color: white;
+.forwhat__card img:first-child{
+  position: relative;
+  z-index: 3;
 }
-.forwhat__card2:hover{
-	background: url(../images/img/forwhat-ip.png);
-	color: white;
+
+.main-card-background{
+
 }
-.forwhat__card3:hover{
-	background: url(../images/img/forwhat-speed.png);
-	color: white;
+
+.forwhat__card h3,
+.forwhat__card p{
+  position: relative;
+  z-index: 2;
 }
-.forwhat__card4:hover{
-	background: url(../images/img/forwhat-anon.png);
-	color: white;
+
+.forwhat__card1:hover .main-card-background,
+.forwhat__card2:hover .main-card-background,
+.forwhat__card3:hover .main-card-background,
+.forwhat__card4:hover .main-card-background,
+.forwhat__card5:hover .main-card-background,
+.forwhat__card6:hover .main-card-background{
+  opacity: 1;
 }
-.forwhat__card5:hover{
-	background: url(../images/img/forwhat-mask.png);
-	color: white;
-}
+.forwhat__card1:hover,
+.forwhat__card2:hover,
+.forwhat__card3:hover,
+.forwhat__card4:hover,
+.forwhat__card5:hover,
 .forwhat__card6:hover{
-	background: url(../images/img/forwhat-support.png);
+  color: #fff;
+}
+
+.main-card-background{
+    display: block;
+    position: absolute;
+    border-radius: 10px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0;
+	background: url(../images/icons/img/forwhat-security.png);
 	color: white;
+  background-repeat: no-repeat;
+    background-position: 50% 0;
+    background-size: cover;
+    transition: 0.4s ease;
 }
 .footer{
 	background: var(--secondary-bg-color);
@@ -359,7 +386,6 @@ p{
 .faq__visible-part{
 	display: flex;
 	justify-content: space-between;
-	margin-bottom: 10px;
 }
 .faq__visible-part h3{
 	font-weight: 600;

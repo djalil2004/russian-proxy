@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Profile</title>
+	<link rel="stylesheet" type="text/css" href="../assets/css/profile.css">
+	<link rel="stylesheet" href="../assets/css/basic.css">
+</head>
+<body>
+	<main>
+		<div class="profile">
+			<div class="profile__contaner">
+				<h3 class="profile__title">Профиль</h3>
+				<div class="profile__up">
+					<div class="profile__email">
+						<img src="../assets/images/icons/icons/Logo-footer.svg">
+						<hr class="profile__email-hr">
+						<div class="profile__email-contaner">
+							<div>
+								<p>Подтвердите Ваш email адрес</p>
+								<a href="#" class="profile__email-btn">Отправить снова</a>
+							</div>
+							<img src="../assets/images/icons/icons/letters.svg">
+						</div>
+					</div>
+					<div class="profile__trafic">
+						<div class="profile__trafic-contaner">	
+							<div >
+								<p class="profile__trafic-text">Трафика использовано за сегодня:</p>
+								<a href="#" class="profile__trafic-btn">Подробности</a>
+							</div>
+							<h3 class="profile__trafic-kb">0 Kb</h3>
+						</div>
+					</div>
+				</div>
+				<div class="profile__down">
+
+					<div class="profile__private-info profile__down-item">
+						<h3 class="private__down-title">Личные данные</h3>
+						<hr>
+						<p>E-mail</p>
+						<input type="text" name="email" class="profile__down-email" placeholder="oooloyren@mail.ru">
+						<div class="profile__down-btn"><a href="#">Сменить эл. почту</a></div>
+						
+					</div>
+
+
+					<div class="profile__password profile__down-item">
+						<h3 class="private__down-title">Поменять пароль</h3>
+						<hr>
+						<p>Старый пароль</p>
+						<input type="password" name="password" class="profile__down-password">
+						<div class="profile__password-new">
+							<div>
+								<p>Новый пароль</p>
+								<input type="password" name="newpassword" class="profile__password-newpassword">		
+							</div>
+							<div>
+								<p>Подтвердить</p>
+								<input type="password" name="confirmpassword" class="profile__password-confirmpassword">	
+							</div>
+						</div>
+						<div class="profile__down-btn"><a  href="#">Сохранить изменения</a></div>
+						
+					</div>
+
+
+					<input type="checkbox" name="" class="news-toggle" id="news-toggle">
+					<input type="checkbox" name="" class="prolong-toggle" id="prolong-toggle">
+					<div class="profile__notifications profile__down-item">
+						<h3 class="private__down-title">Уведомления</h3>
+						<hr>
+						<div class="profile__notifications__labels">
+							<div class="news__toggle-contaner news__toggle-contaner1">
+								<div class="news__toggle-circle news__toggle-circle1"></div>
+							</div>
+							<label for="news-toggle " class="news-label">Новости и обновления продуктов</label>
+						</div>
+						<div class="profile__notifications__labels">
+							<div class="news__toggle-contaner prolong__toggle-contaner2">
+								<div class="news__toggle-circle prolong__toggle-circle2"></div>
+							</div>
+							<label for="prolong-toggle " class="prolong-label">Продление и выставление счетов</label>
+						</div>	
+						
+						<div class="profile__down-btn"><a href="#">Применить</a></div>
+						
+					</div>
+				</div>
+				<div class="profile__email-notif">
+					<img src="../assets/images/icons/icons/greenGalochka.svg">
+					<p>Письмо с подтверждением отправленно на вашу электронную почту</p>
+				</div>
+			</div>
+		</div>
+	</main>
+</body>
+</html>
