@@ -5,6 +5,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Главная страница</title>
 	<link rel="stylesheet" type="text/css" href="../assets/css/main.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <body>
 	<nav class="nav">
@@ -42,6 +46,50 @@
 			<h1 class="header__title">Надежный партнер в сфере <br>мобильных прокси-серверов</h1>
 			<h3 class="header__subtitle">Мы команда опытных профессионалов, предоставляющая надежные и <br> высококачественные услуги мобильных прокси-серверов в Российской <br> Федерации. Наша цель - обеспечить вашу безопасность и успех в онлайне.</h3>
 		</section>
+    
+    <section class="slider-section">
+      <div class="sliderContainer">
+        <div class="progressBarContainer">
+            <div class="item active">
+              <h3>Анонимность</h3>
+              <span data-slick-index="0" class="progressBar"></span>
+            </div>
+            <div class="item">
+              <h3>Безопасность</h3>
+              <span data-slick-index="1" class="progressBar"></span>
+            </div>
+            <div class="item">
+              <h3>Высокая скорость</h3>
+              <span data-slick-index="2" class="progressBar"></span>
+            </div>
+            <div class="item">
+              <h3>Поддержка</h3>
+              <span data-slick-index="3" class="progressBar"></span>
+            </div>
+          </div>
+          <div class="slider single-item">
+            <div class="slide1 slide-main">
+              <h1>Обеспечение анонимности и безопасности</h1>
+              <p>Защита вашей личности и скрытие вашего IP-адреса</p>
+            </div>
+            <div class="slide2 slide-main">
+              <h1>Надежная безопасность данных</h1>
+              <p>Защита ваших данных от киберугроз и хакеров</p>
+            </div>
+            <div class="slide3 slide-main">
+              <h1>Экспресс загрузка и плавный серфинг-путешествие</h1>
+              <p>Быстрая загрузка и плавный просмотр веб-сайтов</p>
+            </div>
+            <div class="slide4 slide-main">
+              <h1>Надежная поддержка 24/7</h1>
+              <p>Наша команда готова помочь вам в любое время</p>
+            </div>
+          </div>
+
+          
+</div>
+		</section>
+
 		<section class="forwhat">
 			<h1 class="header__title">Для чего нужен прокси и для <br>кого подходит?</h1>
 			<div class="forwhat__cards">
@@ -208,5 +256,80 @@
 			</div>
 		</div>
 	</footer>
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script>
+    $(document).ready(() => {
+     $(".slider").slick({
+  infinite: true,
+  arrows: false,
+  dots: false,
+  autoplay: false,
+  speed: 800,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+});
+
+ //ticking machine
+    var percentTime;
+    var tick;
+    var time = 3.1;
+    var progressBarIndex = 0;
+
+    $('.progressBarContainer .progressBar').each(function(index) {
+        var progress = "<div class='inProgress inProgress" + index + "'></div>";
+        $(this).html(progress);
+    });
+
+    function startProgressbar() {
+        resetProgressbar();
+        percentTime = 0;
+        tick = setInterval(interval, 10);
+    }
+
+    function interval() {
+        if (($('.slider .slick-track div[data-slick-index="' + progressBarIndex + '"]').attr("aria-hidden")) === "true") {
+            progressBarIndex = $('.slider .slick-track div[aria-hidden="false"]').data("slickIndex");
+            startProgressbar();
+            $('.item').removeClass('active')
+                $('.progressBarContainer .progressBar[data-slick-index="' + progressBarIndex + '"]').parent().addClass('active')
+            
+        } else {
+            percentTime += 1 / (time + 5);
+            $('.inProgress' + progressBarIndex).css({
+                width: percentTime + "%"
+            });
+            if (percentTime >= 100) {
+                $('.single-item').slick('slickNext');
+                progressBarIndex++;
+                if (progressBarIndex > 3) {
+                    progressBarIndex = 0;
+                }
+                startProgressbar();
+                $('.item').removeClass('active')
+                $('.progressBarContainer .progressBar[data-slick-index="' + progressBarIndex + '"]').parent().addClass('active')
+            }
+        }
+    }
+
+    function resetProgressbar() {
+        $('.inProgress').css({
+            width: 0 + '%'
+        });
+        clearInterval(tick);
+    }
+    startProgressbar();
+    // End ticking machine
+
+    $('.item').click(function () {
+    	clearInterval(tick);
+    	var goToThisIndex = $(this).find("span").data("slickIndex");
+    	$('.single-item').slick('slickGoTo', goToThisIndex, false);
+    	startProgressbar();
+    });
+});
+   
+  </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+  
 </body>
 </html>
