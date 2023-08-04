@@ -7,6 +7,9 @@
   --secondary-btn-color:#202B40;
   --menu-line-color: #3F3F46;
   --white-link-color: #FFF;
+  --channels-color-title: #090909;
+  --green-btn-color:#51FF35;
+  --checkbox-black-color: #030D25;
 }
 *{
   margin: 0;
@@ -53,12 +56,17 @@ a {
   line-height: 150%;
 }
 .button--black {
-  padding: 4px 7px;
+  padding: 5px 15px;
   border-radius: 8px;
   background-color: var(--secondary-btn-color);
-  color: var(--white-link-color);
+  color: var(--white-link-color) !important;
+  border: none;
 
   font-size: 14px;
   font-weight: 500;
   line-height: 150%
+}
+.button--green {
+  background-color: var(--green-btn-color);
+  border: none !important;
 }

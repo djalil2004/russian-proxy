@@ -286,7 +286,7 @@
 }
 .tariff {
     width: 100%;
-    padding: 25px 15px;
+    padding: 10px 15px;
 }
 .tariff__title {
     text-transform: uppercase;
@@ -294,7 +294,7 @@
     line-height: 150%;
 }
 .tariff__title--margin {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 .email-confirm {
     max-width: 400px;
@@ -340,4 +340,156 @@
 }
 .email-confirm__subtitle-text--margin {
     margin-bottom: 13px;
+}
+.select-panel {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 10px;
+}
+.select-panel__button {
+    color: var(--main-font-color);
+}
+
+.channels {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+.channels--margin {
+    margin-top: 10px;
+}
+.channels__change {
+    max-width: 370px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+}
+.channels__change-title {
+    color: var(--channels-color-title);
+    font-family: Montserrat;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 150%;
+}
+.channels__button {
+    border-radius: 35px;
+}
+.channels__button--padding {
+    padding: 10px 20px;
+    font-size: 16px;
+}
+.channels__button-color {
+    color: var(--main-font-color);
+    border: 1px solid var(--secondary-btn-color);
+}
+
+.tariff__card {
+}
+.tariff__card--margin {
+    margin-top: 20px;
+}
+.card {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+.card__item {
+    max-width: 330px;
+    width: 100%;
+    height: 300px;
+    padding: 15px 26px;
+    border-radius: 16px;
+    background-color: var(--main-accent-color);
+    text-align: center;
+}
+.card__btn-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.checkbox-toggler {
+    right: 433px;
+	width: 30px;
+	height: 30px;
+	top: 110px;
+	z-index: 100;
+	opacity: 0;
+}
+.checkbox{
+    display: flex;
+    align-items: center;
+	background: var(--secondary-btn-color);
+    border-radius: 20px;
+    width: 40px;
+    height: 20px;
+    position: relative;
+    transition: .2s ease-out;
+} 
+.checkbox.active{
+    background-color: var(--green-btn-color);
+    transition: .2s ease-out;
+} 
+.checkbox__circle {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    right: 21px;
+    top: 2px;
+    position: absolute;
+    background-color: var(--white-link-color);
+    transition: .2s ease-out;
+}
+.checkbox-input {
+    width: 40px;
+    height: 20px;
+    opacity: 0;
+    z-index: 1;
+    cursor: pointer;
+}
+.checkbox-input:checked ~ .checkbox__circle {
+    right: 3px;
+    background-color: var(--checkbox-black-color);
+    transition: .2s ease-out;
+}
+.card__data {
+    display: flex;
+    justify-content: space-between;
+    color: var(--white-link-color);
+    width: 100%;
+}
+.card__title:first-child {
+    font-weight: 600;
+}
+.card__data--margin {
+    margin-top: 10px;
+}
+.card__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 140px;
+    width: 100%;
+    color: var(--white-link-color);
+    text-align: start;
+}
+.card__info--margin {
+    margin-top: 10px;
+}
+.card__info-text img{
+    margin-right: 10px;
+}
+.card__tariff-btn {
+    background-color: var(--white-link-color);
+    color: var(--main-font-color);
+    border-radius: 5px;
+}
+.card__tariff-btn--margin {
+    margin-top: 30px;
 }
