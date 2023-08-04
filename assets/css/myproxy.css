@@ -102,8 +102,10 @@
 .api__key{
 	display: flex;
 	margin-top: 40px;
+	width: 100%;
+	justify-content: space-between;
 }
-.api__key p:nth-of-type(1){
+.api__key-contaner-title{
 	font-weight: 600;
 	padding: 10px;
 	background: var(--secondary-bg-color);
@@ -121,6 +123,11 @@
 	outline: none;
 	font-size: 14px;
 }
+.api__key-contaner{
+	display: flex;
+	height: 45px;
+}
+
 .api__key img{
 	padding: 14px 20px;
 }
@@ -143,4 +150,41 @@
 	transform: translateY(100px);
 	color: white;
 	width: 100px;
+}
+
+.myproxy__choosetarif{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	text-align: center;
+	align-items: center;
+	margin-top: 30px;
+}
+.myproxy__choosetarif p{
+	margin-bottom: 40px;
+}
+.myproxy__choosetarif a{
+	text-decoration: none;
+	color: white;
+	padding: 10px 30px ;
+	background: var(--main-accent-color);
+	border-radius: 5px;
+}
+.api__key-text{
+	width: 390px;
+	background: var(--secondary-bg-color);
+	border-radius: 15px;
+}
+.api__key-text-text{
+	font-weight: 400;
+	padding: 16px;
+	color: white;
+}
+.api__key-text h3{
+	padding: 16px;
+	color: white;
+	background: #395170;
+	border-radius: 15px 15px 0 0;
+	font-weight: 500;
 }
