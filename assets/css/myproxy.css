@@ -1,8 +1,18 @@
+.nav-block {
+	display: flex;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+}
 .myproxy{
 	width: 100%;
 	height: 100vh;
-	padding: 25px;
+	padding: 72px 0px 20px 75px;
 	background: var(--main-bg-color);
+
 }
 .myproxy__contaner{
 	position: relative;
