@@ -374,7 +374,7 @@
     font-family: Montserrat;
     font-size: 32px;
     font-weight: 500;
-    line-height: 150%;
+    line-height: 70%;
 }
 .channels__button {
     border-radius: 35px;
@@ -481,6 +481,10 @@
 }
 .card__info--margin {
     margin-top: 10px;
+}
+.card__info-text{
+    font-size: 14px;
+    font-weight: 600;
 }
 .card__info-text img{
     margin-right: 10px;
