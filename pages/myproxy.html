@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Мои прокси</title>
+	<link rel="stylesheet" type="text/css" href="../assets/css/myproxy.css">
+	<link rel="stylesheet" href="../assets/css/basic.css">
+</head>
+<body>
+	<main>
+		<div class="myproxy">
+			<div class="myproxy__contaner">
+				<h3 class="myproxy__title">Мои прокси</h3>
+				<div class="myproxy__up">
+					<div class="myproxy__email">
+						<img src="../assets/images/icons/icons/Logo-footer.svg">
+						<hr class="myproxy__email-hr">
+						<div class="myproxy__email-contaner">
+							<div>
+								<p>Подтвердите Ваш email адрес</p>
+								<a href="#" class="myproxy__email-btn">Отправить снова</a>
+							</div>
+							<img src="../assets/images/icons/icons/letters.svg">
+						</div>
+					</div>
+				</div>
+				<div class="myproxy__down">
+					<div class="tab">
+					  <button class="tablinks" onclick="openCity(event, 'proxylist')">Список прокси</button>
+					  <button class="tablinks" onclick="openCity(event, 'API')">API</button>
+					</div>
+
+					<div id="proxylist" class="tabcontent">
+					  <table>
+					  	<tr>
+					  		<th><input type="checkbox" name="proxylist__checkbox"></th>
+					  		<th>IP</th>
+					  		<th>Порт</th>
+					  		<th>Логин</th>
+					  		<th>Пароль</th>
+					  		<th>Протокол</th>
+					  		<th>Скорость</th>
+					  		<th>Канал</th>
+					  		<th>Дяействуе до</th>
+					  	</tr>
+					  	<tr>
+					  		<td><input type="checkbox" name="proxylist__checkbox"></td>
+					  		<td>94.136.137.245</td>
+					  		<td>8000</td>
+					  		<td>XEM5Rf <img src="../assets/images/icons/icons/copy.svg"></td>
+					  		<td>FQ8NCU<img src="../assets/images/icons/icons/copy.svg"></td>
+					  		<td>HTTP</td>
+					  		<td>317ms</td>
+					  		<td>Общий</td>
+					  		<td>01.09.2023</td>
+					  	</tr>
+					  	<tr>
+					  		<td><input type="checkbox" name="proxylist__checkbox"></td>
+					  		<td>94.028.137.248</td>
+					  		<td>8000</td>
+					  		<td>HPM4Rf <img src="../assets/images/icons/icons/copy.svg"></td>
+					  		<td>LL9PCU<img src="../assets/images/icons/icons/copy.svg"></td>
+					  		<td>HTTP</td>
+					  		<td>300ms</td>
+					  		<td>Частный</td>
+					  		<td>25.08.2023</td>
+					  	</tr>
+					  </table>
+					</div>
+
+					<div id="API" class="tabcontent">
+					  <div class="api__key">
+					  	<p>API key:</p>
+					  	<textarea id="content" class="api__key-key">&key=2b419e9f49b760d0q5592f69831546</textarea>
+					  	<img src="../assets/images/icons/icons/reload.svg" class="api__key-reload">
+					  	
+					  	<button id="copy" class="api__key-copy"><img src="../assets/images/icons/icons/copy_green.svg"></button>
+					  	<script>
+					  		document.getElementById("copy").onclick = function() {
+						    var copyTextarea = document.createElement("textarea");
+						    copyTextarea.style.position = "fixed";
+						    copyTextarea.style.opacity = "0";
+						    copyTextarea.textContent = document.getElementById("content").value;
+						 
+						    document.body.appendChild(copyTextarea);
+						    copyTextarea.select();
+						    document.execCommand("copy");
+						    document.body.removeChild(copyTextarea);
+							}
+					  	</script>
+					  </div>
+					</div>
+
+					<script>
+						function openCity(evt, cityName) {
+						    var i, tabcontent, tablinks;
+						    tabcontent = document.getElementsByClassName("tabcontent");
+						    for (i = 0; i < tabcontent.length; i++) {
+						        tabcontent[i].style.display = "none";
+						    }
+						    tablinks = document.getElementsByClassName("tablinks");
+						    for (i = 0; i < tablinks.length; i++) {
+						        tablinks[i].className = tablinks[i].className.replace(" active", "");
+						    }
+						    document.getElementById(cityName).style.display = "block";
+						    evt.currentTarget.className += " active";
+						}
+					</script>
+				</div>
+			</div>
+		</div>
+	</main>
+</body>
+</html>

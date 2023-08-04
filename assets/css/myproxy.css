@@ -1,0 +1,146 @@
+.myproxy{
+	width: 100%;
+	height: 100vh;
+	padding: 25px;
+	background: var(--main-bg-color);
+}
+.myproxy__contaner{
+	position: relative;
+}
+.myproxy__title{
+	margin-bottom: 30px;
+	color: var(--main-font-color);
+}
+.myproxy__up{
+	display: flex;
+	margin-bottom: 30px;
+}
+.myproxy__email{
+	width: 476px;
+	margin-right: 25px;
+	background: var(--main-accent-color);
+	border-radius: 5px;
+	padding: 15px 12px;
+}
+.myproxy__email img{
+	margin-bottom: 17px;
+}
+.myproxy__email-hr{
+	border:1px solid var(--secondary-btn-color);
+	margin-bottom: 17px;
+}
+.myproxy__email p{
+	margin-bottom: 33px;
+}
+.myproxy__email-contaner img{
+	margin-left: 62px;
+}
+.myproxy__email-contaner{
+	display: flex;
+	color: white;
+}
+.myproxy__email-btn{
+	text-decoration: none;
+	color: white;
+	background: var(--secondary-btn-color);
+	padding: 10px;
+	border-radius: 5px;
+
+}
+/* Style the tab */
+.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+    background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+    width: 100%;
+}
+.tabcontent table{
+	width: 100%;
+}
+.tabcontent table td{
+	text-align: center;
+	padding: 32px 10px;
+	border-top: 1px solid #AEB9CF;
+}
+.tabcontent table th{
+	padding: 15px 10px;
+}
+.tabcontent table input{
+	width: 16px;
+	height: 16px;
+}
+.api__key{
+	display: flex;
+	margin-top: 40px;
+}
+.api__key p:nth-of-type(1){
+	font-weight: 600;
+	padding: 10px;
+	background: var(--secondary-bg-color);
+	color: white;
+	margin-right: 3px;
+	border-radius: 5px 0 0 5px;
+}
+.api__key-key{
+	color: white;
+	background: var(--secondary-bg-color);
+	padding: 12px;
+	width: 700px;
+	font-weight: 400;
+	resize: none;
+	outline: none;
+	font-size: 14px;
+}
+.api__key img{
+	padding: 14px 20px;
+}
+.api__key-reload{
+	background: var(--main-accent-color);
+}
+.api__key-copy{
+	background: #426694;
+	border-radius: 0 5px 5px 0;
+	outline: none;
+	border-radius: none;
+    cursor: pointer;
+    position: relative;
+}
+.api__key-copy:active::before{
+	content: "API скопирован в буфер обмена";
+	padding: 10px;
+	background: var(--secondary-bg-color);
+	position: absolute;
+	transform: translateY(100px);
+	color: white;
+	width: 100px;
+}
